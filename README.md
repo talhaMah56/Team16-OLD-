@@ -13,13 +13,14 @@ WORK ON THIS ONE
    </td>
   </tr>
   <tr>
-   <td>Athlete persona
+   <td>Karen
    </td>
-   <td>An active athlete involved in sports activities
+   <td>70 years old, retired & married
    </td>
-   <td>To buy high-quality products(apparel, shoes, etc) which will enhance their performance and durability, comfort, and style
+   <td>To find TV shows from her youth, and see how they have ages
    </td>
-   <td>Limited budget, difficulty in finding suitable products that meet their specific requirements, lack of product information or expert recommendations
+   <td>Has hard time navigating websites and using technology
+   
    </td>
   </tr>
   <tr>
