@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { Route, Routes, NavLink } from "react-router-dom";
+import { Settings } from "./Components/Settings";
+import { MainHeader } from "./Layout/MainHeader";
+import { AddMediaPage } from "./Pages/AddMediaPage";
+import { FriendsPage } from "./Pages/FriendsPage";
+import { HomePage } from "./Pages/HomePage";
+import { MyListsPage } from "./Pages/MyListsPage";
 
 function App() {
+  const [settingsIsShown, setSettingsIsShown] = useState(false);
+  const [role, setRole] = useState("Default");
+
+  const showSettingsHandler = () => {
+    setSettingsIsShown(true);
+  };
+
+  const hideSettingsHandler = () => {
+    setSettingsIsShown(false);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <MainHeader showSettingsHandler={showSettingsHandler} role={role} />
+
+      {settingsIsShown && (
+        <Settings
+          hideSettingsHandler={hideSettingsHandler}
+          role={role}
+          setRole={setRole}
+        />
+      )}
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/friends" element={<FriendsPage />} />
+        <Route path="/mylists" element={<MyListsPage />} />
+        <Route path="/addMedia" element={<AddMediaPage />} />
+      </Routes>
+      <p>{role}</p>
     </div>
   );
 }
