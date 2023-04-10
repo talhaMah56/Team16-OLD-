@@ -6,6 +6,7 @@ import { AddMediaPage } from "./Pages/AddMediaPage";
 import { FriendsPage } from "./Pages/FriendsPage";
 import { HomePage } from "./Pages/HomePage";
 import { MyListsPage } from "./Pages/MyListsPage";
+import { BrowseMedia } from "./Pages/BrowseMedia";
 
 function App() {
   const [settingsIsShown, setSettingsIsShown] = useState(false);
@@ -36,6 +37,7 @@ function App() {
         <Route path="/friends" element={<FriendsPage />} />
         <Route path="/mylists" element={<MyListsPage />} />
         <Route path="/addMedia" element={<AddMediaPage />} />
+        <Route path="/browseMedia" element={<BrowseMedia />} />
       </Routes>
       <p>{role}</p>
     </div>
