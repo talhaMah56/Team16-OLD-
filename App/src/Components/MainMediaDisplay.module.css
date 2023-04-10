@@ -1,0 +1,11 @@
+.media_display p {
+  color: white;
+  font-size: 10rem;
+}
+
+.media_display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--grey-1);
+}

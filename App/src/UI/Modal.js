@@ -9,23 +9,29 @@ const Backdrop = (props) => {
 };
 
 const ModalOverlay = (props) => {
-  return <div className={classes.modal}>{props.children}</div>;
+  return (
+    <div className={`${classes.modal} ${props.className}`}>
+      {props.children}
+    </div>
+  );
 };
 
 const portalElement = document.getElementById("overlays");
 
 const Modal = (props) => {
   return (
-    <>
+    <div className={props.className}>
       {createPortal(
         <Backdrop hideSettingsHandler={props.hideSettingsHandler} />,
         portalElement
       )}
       {createPortal(
-        <ModalOverlay>{props.children}</ModalOverlay>,
+        <ModalOverlay className={props.className}>
+          {props.children}
+        </ModalOverlay>,
         portalElement
       )}
-    </>
+    </div>
   );
 };
 

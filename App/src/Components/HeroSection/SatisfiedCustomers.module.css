@@ -27,6 +27,6 @@
 }
 
 .current_users_text span {
-  color: var(--shade-1);
+  color: #fff;
   font-weight: 700;
 }

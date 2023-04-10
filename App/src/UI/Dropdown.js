@@ -10,6 +10,10 @@ export const BasicDropdown = (props) => {
     ? `${classes.dropdown_menu} ${classes.active}`
     : `${classes.dropdown_menu} ${classes.inactive}`;
 
+  let menuTriggerStyle = dropdownOpen
+    ? `${classes.menu_trigger} ${classes.active_icon}`
+    : `${classes.menu_trigger}`;
+
   const toggleDropdownHandler = () => {
     setDropdownOpen((prevState) => !prevState);
   };
@@ -30,10 +34,7 @@ export const BasicDropdown = (props) => {
 
   return (
     <div className={classes.dropdown_wrapper} ref={menuRef}>
-      <button
-        className={`${classes.menu_trigger}`}
-        onClick={toggleDropdownHandler}
-      >
+      <button className={menuTriggerStyle} onClick={toggleDropdownHandler}>
         {props.title} <IoIosArrowBack className={classes.icon} />
       </button>
 
@@ -53,7 +54,9 @@ export const BasicDropdown = (props) => {
 
 const DropdownItem = (props) => {
   const clickHandler = () => {
-    props.onClick(props.text);
+    if (props.onClick) {
+      props.onClick(props.text);
+    }
     props.toggleDropdownHandler();
   };
 

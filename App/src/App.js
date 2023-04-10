@@ -37,7 +37,6 @@ function App() {
         <Route path="/mylists" element={<MyListsPage />} />
         <Route path="/addMedia" element={<AddMediaPage />} />
       </Routes>
-      <p>{role}</p>
     </div>
   );
 }

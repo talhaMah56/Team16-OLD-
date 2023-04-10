@@ -4,7 +4,7 @@
   text-decoration: none;
   color: var(--grey-2);
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: 3.4rem;
   letter-spacing: 0.5rem;
 
   transition: all 300ms;
@@ -12,13 +12,13 @@
 
 .logo:hover,
 .logo:active {
-  color: var(--shade-1);
+  color: #fff;
 }
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--tint-1);
+  background-color: var(--primary);
 
   /* Because we want the header to be fixed later */
   height: 9.6rem;

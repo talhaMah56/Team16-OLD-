@@ -1,0 +1,15 @@
+.filter {
+  background-color: var(--grey-2);
+  padding: 1rem 1rem;
+  gap: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: start;
+}
+
+.filter span {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}

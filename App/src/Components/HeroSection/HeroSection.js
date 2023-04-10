@@ -22,8 +22,11 @@ export const HeroSection = () => {
           </a>
           <SatisfiedCustomers />
         </div>
-        <div className="hero-img-box">
-          <p>image goes here</p>
+        <div className={classes.hero_img}>
+          <img
+            src={require("../../imgs/hero-img.png")}
+            alt="Image of Bumblebee"
+          />
         </div>
       </div>
     </section>
