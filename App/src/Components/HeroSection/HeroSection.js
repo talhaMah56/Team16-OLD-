@@ -1,5 +1,6 @@
 import classes from "./HeroSection.module.css";
 import { SatisfiedCustomers } from "./SatisfiedCustomers";
+import { NavLink } from "react-router-dom";
 
 export const HeroSection = () => {
   return (
@@ -14,9 +15,10 @@ export const HeroSection = () => {
             favorite Movies, Shows and Documentaries with your friends and
             family online
           </p>
-          <a href="#" className="btn btn--full margin-right-sm">
+          <NavLink to="/browseMedia" className="btn btn--full margin-right-sm">
             Browse Media
-          </a>
+          </NavLink>
+
           <a href="#" className="btn btn--outline">
             Learn more &darr;
           </a>
