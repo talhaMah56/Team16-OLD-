@@ -1,5 +1,6 @@
 import { BasicDropdown } from "../UI/Dropdown";
 import Modal from "../UI/Modal";
+<<<<<<< HEAD
 import { IoMdSettings } from "react-icons/io";
 import classes from "./Settings.module.css";
 
@@ -41,4 +42,21 @@ export const Settings = (props) => {
       </button>
     </Modal>
   );
+=======
+
+export const Settings = (props) => {
+    return (
+        <Modal hideSettingsHandler={props.hideSettingsHandler}>
+            <div>
+                <p>Settings</p>
+                <BasicDropdown
+                    items={["Default", "Admin", "Super"]}
+                    title={"Change Role"}
+                    onClick={props.setRole}
+                />
+            </div>
+            {/* <button onClick={props.hideSettingsHandler}>Close</button> */}
+        </Modal>
+    );
+>>>>>>> main
 };
