@@ -53,6 +53,7 @@ export const BasicDropdown = (props) => {
 
 const DropdownItem = (props) => {
     const clickHandler = () => {
+        console.log("click Handler DropdownItem");
         props.onClick(props.text);
         props.toggleDropdownHandler();
     };
