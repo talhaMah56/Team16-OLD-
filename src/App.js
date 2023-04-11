@@ -9,7 +9,7 @@ import { MyListsPage } from "./Pages/MyListsPage";
 import { BrowseMedia } from "./Pages/BrowseMedia.tsx";
 import { nanoid } from "nanoid";
 
-const mediaData = [
+export const mediaData = [
     {
         title: "The Hunger Games",
         type: "Movie",
