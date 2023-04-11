@@ -8,37 +8,37 @@ import { HomePage } from "./Pages/HomePage";
 import { MyListsPage } from "./Pages/MyListsPage";
 
 function App() {
-  const [settingsIsShown, setSettingsIsShown] = useState(false);
-  const [role, setRole] = useState("Default");
+    const [settingsIsShown, setSettingsIsShown] = useState(false);
+    const [role, setRole] = useState("Default");
 
-  const showSettingsHandler = () => {
-    setSettingsIsShown(true);
-  };
+    const showSettingsHandler = () => {
+        setSettingsIsShown(true);
+    };
 
-  const hideSettingsHandler = () => {
-    setSettingsIsShown(false);
-  };
+    const hideSettingsHandler = () => {
+        setSettingsIsShown(false);
+    };
 
-  return (
-    <div>
-      <MainHeader showSettingsHandler={showSettingsHandler} role={role} />
+    return (
+        <div>
+            <MainHeader showSettingsHandler={showSettingsHandler} role={role} />
 
-      {settingsIsShown && (
-        <Settings
-          hideSettingsHandler={hideSettingsHandler}
-          role={role}
-          setRole={setRole}
-        />
-      )}
+            {settingsIsShown && (
+                <Settings
+                    hideSettingsHandler={hideSettingsHandler}
+                    role={role}
+                    setRole={setRole}
+                />
+            )}
 
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/friends" element={<FriendsPage />} />
-        <Route path="/mylists" element={<MyListsPage />} />
-        <Route path="/addMedia" element={<AddMediaPage />} />
-      </Routes>
-    </div>
-  );
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/friends" element={<FriendsPage />} />
+                <Route path="/mylists" element={<MyListsPage />} />
+                <Route path="/addMedia" element={<AddMediaPage />} />
+            </Routes>
+        </div>
+    );
 }
 
 export default App;
