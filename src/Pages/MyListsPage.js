@@ -1,3 +1,3 @@
 export const MyListsPage = () => {
-  return <p>My Lists</p>;
+    return <p>My Lists</p>;
 };

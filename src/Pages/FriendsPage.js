@@ -1,3 +1,3 @@
 export const FriendsPage = () => {
-  return <p>Friends</p>;
+    return <p>Friends</p>;
 };

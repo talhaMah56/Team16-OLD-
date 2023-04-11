@@ -1,4 +1,5 @@
 # Team16
+
 <table>
   <tr>
     <td>Persona</td>
@@ -20,7 +21,6 @@
    <td>to see how other people rate his favorite shows and to argue with others about their ratings</td>
    <td>Has hard time finding what others have to say about his favorite TV shows, and would like more sociability</td>
   </tr>
-
 
   <tr>
    <td>Alice</td>

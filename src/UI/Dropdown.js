@@ -3,63 +3,64 @@ import classes from "./Dropdown.module.css";
 import { IoIosArrowBack } from "react-icons/io";
 
 export const BasicDropdown = (props) => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  let menuRef = useRef();
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+    let menuRef = useRef();
 
-  let dropdownMenuStyle = dropdownOpen
-    ? `${classes.dropdown_menu} ${classes.active}`
-    : `${classes.dropdown_menu} ${classes.inactive}`;
+    let dropdownMenuStyle = dropdownOpen
+        ? `${classes.dropdown_menu} ${classes.active}`
+        : `${classes.dropdown_menu} ${classes.inactive}`;
 
-  const toggleDropdownHandler = () => {
-    setDropdownOpen((prevState) => !prevState);
-  };
-
-  useEffect(() => {
-    let handler = (e) => {
-      if (!menuRef.current.contains(e.target)) {
-        setDropdownOpen(false);
-      }
+    const toggleDropdownHandler = () => {
+        setDropdownOpen((prevState) => !prevState);
     };
 
-    document.addEventListener("mousedown", handler);
+    useEffect(() => {
+        let handler = (e) => {
+            if (!menuRef.current.contains(e.target)) {
+                setDropdownOpen(false);
+            }
+        };
 
-    return () => {
-      document.removeEventListener("mousedown", handler);
-    };
-  });
+        document.addEventListener("mousedown", handler);
 
-  return (
-    <div className={classes.dropdown_wrapper} ref={menuRef}>
-      <button
-        className={`${classes.menu_trigger}`}
-        onClick={toggleDropdownHandler}
-      >
-        {props.title} <IoIosArrowBack className={classes.icon} />
-      </button>
+        return () => {
+            document.removeEventListener("mousedown", handler);
+        };
+    });
 
-      <div className={dropdownMenuStyle}>
-        {props.items.map((item) => (
-          <DropdownItem
-            text={item}
-            toggleDropdownHandler={toggleDropdownHandler}
-            key={item}
-            onClick={props.onClick}
-          />
-        ))}
-      </div>
-    </div>
-  );
+    return (
+        <div className={classes.dropdown_wrapper} ref={menuRef}>
+            <button
+                className={`${classes.menu_trigger}`}
+                onClick={toggleDropdownHandler}
+            >
+                {props.title} <IoIosArrowBack className={classes.icon} />
+            </button>
+
+            <div className={dropdownMenuStyle}>
+                {props.items.map((item) => (
+                    <DropdownItem
+                        text={item}
+                        toggleDropdownHandler={toggleDropdownHandler}
+                        key={item}
+                        onClick={props.onClick}
+                    />
+                ))}
+            </div>
+        </div>
+    );
 };
 
 const DropdownItem = (props) => {
-  const clickHandler = () => {
-    props.onClick(props.text);
-    props.toggleDropdownHandler();
-  };
+    const clickHandler = () => {
+        props.onClick(props.text);
+        props.toggleDropdownHandler();
+    };
 
-  return (
-    <a onClick={clickHandler} className={classes.dropdownItem}>
-      {props.text}
-    </a>
-  );
+    return (
+        <a href="/HERE" onClick={clickHandler} className={classes.dropdownItem}>
+            {" "}
+            {props.text}
+        </a>
+    );
 };
