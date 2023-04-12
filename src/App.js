@@ -74,9 +74,9 @@ export const mediaData = [
         movieId: nanoid()
     },
     {
-        title: "The Night Agent",
+        title: "Gilmore Girls",
         type: "Show",
-        yearReleased: 2023,
+        yearReleased: 2000,
         rating: 0,
         movieId: nanoid()
     },
