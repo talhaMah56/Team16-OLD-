@@ -1,3 +1,3 @@
 export const AddMediaPage = () => {
-    return <p>This is Add media page</p>;
+  return <p>This is Add media page</p>;
 };
